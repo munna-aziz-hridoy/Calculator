@@ -1,0 +1,139 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+/* Variable Css */
+
+:root{
+    --hue-color: 230;
+
+    /* colors */
+    --first-color: hsl(var(--hue-color), 65%, 45%);
+    --first-color-light: hsl(var(--hue-color), 40%, 85%);
+    --first-color-text: hsl(var(--hue-color), 40%, 30%);
+    --text-color: hsl(var(--hue-color), 20%, 25%);
+    --body-color: hsl(var(--hue-color), 30%, 90%);
+    --white-color: rgb(255, 255, 255);
+    --white-color-alt: rgba(255, 255, 255, 0.8);
+
+    /* font */
+    --body-font: 'Poppins', sans-serif;
+
+    /* font-size */
+    --font-big-size: 2rem;
+    --font-medium-size: 1.5rem;
+    --font-normal-size: 1rem;
+    --font-small-size: 0.813rem;
+
+
+    /* margins */
+    --mb-0-5: 0.5rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--body-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    max-width: 768px;
+    
+}
+
+.calculator{
+    /* position: relative; */
+    background: var(--first-color-light);
+    width: 350px;
+    min-height: 500px;
+    border-radius: 0.7rem;
+    box-shadow:  -15px 15px 50px #a1a6ba,
+             15px -15px 50px #f1f8ff;
+
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+}
+
+.display{
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 0.3rem 0.6rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    min-height: 100px;
+}
+
+.previous_operand{
+    font-family: var(--body-font);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+
+.current_operand{
+    font-family: var(--body-font);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+
+}
+
+.buttons{
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+    padding: 1rem;
+    
+
+}
+
+.buttons button{
+    border: none;
+    border-radius: 1rem;
+    background: #c9cfe8;
+    box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
+    -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: var(--body-font);
+    color: var(--text-color);
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+}
+
+.buttons button:nth-child(1),
+.buttons button:nth-child(2),
+.buttons button:nth-child(3),
+.buttons button:nth-child(4){
+    color: var(--white-color);
+    background: hsl(var(--hue-color), 85%, 50%);
+}
+.buttons .span-2{
+    grid-column: span 2;
+    width: unset;
+    height: unset;
+}
+
+
+
+
+/* , inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5) */
